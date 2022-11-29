@@ -1,0 +1,50 @@
+﻿<Page x:Class="BeautyShopApp.Pages.PageAddEditService"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BeautyShopApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Добавление/редактирование услуги">
+    <Page.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource MainTblck}"/>
+        <Style TargetType="TextBox" BasedOn="{StaticResource MainTbx}"/>
+
+    </Page.Resources>
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Название услуги: "/>
+                <TextBox Name="TblckTitle"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Цена: "/>
+                <TextBox x:Name="TblckCost"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Продолжительность (в мин.): "/>
+                <TextBox x:Name="TblckDuration"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Скидка: "/>
+                <TextBox x:Name="TblckDiscount"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Описание: "/>
+                <TextBox Name="TblckDescription"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Основное изображение: "/>
+                <TextBox Name="TblckMainImage"/>
+            </StackPanel>
+            <Button x:Name="BtnSave"
+                    Content="Сохранить"
+                    Style="{StaticResource MainBtn}"
+                    Click="BtnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
